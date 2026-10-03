@@ -55,12 +55,43 @@ Hello Guys 🖐️
 
 **Fix:** made width of menu-card 90% of the viewport width. Also made padding 5% of viewport width so that it stays at center.
 
-**Checked:** The menu-cards are visible even at 160px width or below!
+**Checked:** The menu-cards are visible even at 160px width or below! FIXED
 
 **Time:** 10 - 15 min  *Found a bug at 490px width EXTRA?*
 ----------------------------------------------------------------------------------------
 
 ### CC-04: "The buttons don't work on my tablet"
+
+**Reproduced:** changed width to 768px for tablet width.This behaviour is for 760px - 900px width.
+
+**Cause:** There is an after element that is above btn thus preventing its interaction.
+
+**Fix:** Deleted the media query responsible for this on line 1031 to 1046
+
+**Checked:** Button was already working lol, now user can interact with it directly. FIXED
+
+**Time:** 2 min
+----------------------------------------------------------------------------------------
+
+### CC-05: "The category bar scrolls away on my phone"
+
+**Reproduced:** shifted to 320px width.
+
+**Thinking Process:** something to do with 'sticky position'. sticky is applied to filter. Its parent has overflow-x. Found it.
+
+We want filters div to stick below the .slot-bar div. But that will make the filter tab take up half of the screen on smaller devices.
+
+**Cause:** Overflow property makes the sticky element stick to it not the page.
+
+**Fix:** Deleted the overflow property for it.
+
+**Checked:** It does stick, but it sticks to the top. I dont think this is the actual fix, I'll ask a senior
+PENDING
+
+**Time:** >1hr
+----------------------------------------------------------------------------------------
+
+### CC-06: "I ordered more than they had"
 
 **Reproduced:**
 

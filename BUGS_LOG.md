@@ -20,7 +20,7 @@ what you tried**, and move on  that note is worth marks too
 
 
 
-### CC-01 : "The search suggestions are behind everything"
+### CC-01 : "The search suggestions are behind everything" *Done*
 
 > "I start typing a dish name and the list of suggestions comes up, but
 > it's stuck behind the rest of the page. I can only click the very top
@@ -30,7 +30,7 @@ Reported by: a student, on a laptop
 
 
 
-### CC-02: "Can't read anything in dark mode"
+### CC-02: "Can't read anything in dark mode" *Done*
 
 > "I switched the site to dark mode and now the dish names and the prices
 > are almost invisible. The grey line under the name is fine, it's just
@@ -41,7 +41,7 @@ open the site, without changing anything
 
 
 
-### CC-03: "The menu is wider than my phone"
+### CC-03: "The menu is wider than my phone" *Done*
 
 > "I have to scroll sideways to see the whole menu, and the Add to Cart
 > buttons on the right-hand dishes are cut off the edge of the screen"
@@ -50,7 +50,7 @@ Reported by: a student, on a phone
 
 
 
-### CC-04: "The buttons don't work on my tablet"
+### CC-04: "The buttons don't work on my tablet" *Done*
 
 > "Add to Cart does nothing. The star to save a dish does nothing either.
 > The buttons look completely normal. It works fine on my laptop, and it
@@ -60,7 +60,7 @@ Reported by: a student, on a tablet
 
 
 
-### CC-05: "The category bar scrolls away on my phone"
+### CC-05: "The category bar scrolls away on my phone" *Ask a Senior*
 
 > "On smaller screens, the category and filter bar scrolls away instead of
 > staying visible at the top while I scroll down through the menu dishes."
