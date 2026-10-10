@@ -93,9 +93,9 @@ PENDING
 
 ### CC-06: "I ordered more than they had"
 
-**Reproduced:**
+**Reproduced:** Clicked add to cart and increased the order count for the item where only few(3) were left.
 
-**Thinking Process:**
+**Thinking Process:** Clearly there is no limit to no. of item's count that can be increamented on these items
 
 **Cause:**
 
