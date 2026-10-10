@@ -69,7 +69,7 @@ Reported by: a student, on a phone
 
 
 
-### CC-06: "I ordered more than they had"
+### CC-06: "I ordered more than they had" *Done*
 
 > "The counter says only 2 samosas were left but it let me order 5, and
 > the order went through fine. When I got there they only had 2?"

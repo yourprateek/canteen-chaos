@@ -95,7 +95,29 @@ PENDING
 
 **Reproduced:** Clicked add to cart and increased the order count for the item where only few(3) were left.
 
-**Thinking Process:** Clearly there is no limit to no. of item's count that can be increamented on these items
+**Thinking Process:** 
+> Clearly there is no limit to no. of item's count that can be increamented on these items.
+> Found the btn on 153 line in menu.js in frontend.
+> I did not knew what data-action is, so I searched it on google.
+> went to the inc case on line 234.
+> went addToCart() in cart.js ar line 186.
+> went to state.js, addToCart() at line 106. addToCart() calls setQty() just above it.
+> final: setQty must have another error cond for (if next > dish.stock)
+
+**Cause:** there was no condition check to prevent increment when qty-value increased greater than the stock
+
+**Fix:** added that condition to setQty() in state.js at line 97 (integrated it with)
+
+**Checked:** checked on two items that had low badge acive. FIXED
+
+**Time:** about ~4hr
+----------------------------------------------------------------------------------------
+
+### CC-07: "Cancelling makes it worse"
+
+**Reproduced:** 
+
+**Thinking Process:**
 
 **Cause:**
 
