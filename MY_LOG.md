@@ -57,7 +57,8 @@ Hello Guys 🖐️
 
 **Checked:** The menu-cards are visible even at 160px width or below! *FIXED*
 
-**Time:** 10 - 15 min  *Found a bug at 490px width EXTRA?*
+**Time:** 10 - 15 min  
+*Found a bug at 481px width EXTRA? --> refer to CC-11E (just after all the mandatory bugs)*
 ----------------------------------------------------------------------------------------
 
 ### CC-04: "The buttons don't work on my tablet"
@@ -184,7 +185,25 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 
 **Fix:** swapped valued that swapped to make the math correct
 
-**Checked:** Reloaded and changed filter to low to high, it correctly shows low priced one first and same goes with high to low
+**Checked:** Reloaded and changed filter to low to high, it correctly shows low priced one first and same goes with high to low *FIXED*
 
 **Time:** ~15 min
+----------------------------------------------------------------------------------------
+
+### CC-11(Extra): "from width: 480px to around 630px, the menu-grid is wider than the topbar"
+
+**Reproduced:** shifted to 500px width using inspect tool.
+
+**Thinking Process:**
+> the grid is becoming 2 column too early.
+> the grid goes out of viewport width.
+> noticed that when reducing width, at 694px, the width of image gets unequally shrinked, this is not 1fr
+
+**Cause:** the min-width of image got locked because of some reason related to its parent.
+
+**Fix:** added a min-width: 0; in image's parent class to lock it to its parent.
+
+**Checked:** Checked the layout of the grid menu properly in all width sizes. *FIXED*
+
+**Time:** ~45 min
 ----------------------------------------------------------------------------------------

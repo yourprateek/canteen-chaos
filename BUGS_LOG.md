@@ -106,7 +106,7 @@ Reported by: a student
 
 
 
-### CC-10: "Sorting by price is backwards"
+### CC-10: "Sorting by price is backwards" *Done*
 
 > "I picked 'price: low to high' and the most expensive things came first.
 > I tried the other option and that gave me the cheap ones. Both are the
