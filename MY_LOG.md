@@ -115,7 +115,7 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 
 ### CC-07: "Cancelling makes it worse"
 
-**Reproduced:** Ordered A dish and cancelled right away, the no. of dishes dropped and dropped again when cancelled but never came back in the counter tab. Ordered 2 dish, subtracted 4.
+**Reproduced:** Ordered A dish and cancelled right away, the no. of dishes dropped when ordered and dropped again when cancelled but never came back in the counter tab. Ordered 2 dish, subtracted 4.
 
 **Thinking Process:**
 > went to cancel order btn in indec.html line 268.
@@ -136,7 +136,7 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 
 ### CC-08: "An old coupon still works"
 
-**Reproduced:** coupons.json has only one coupon that has expired. Added one more, used both. both apply.
+**Reproduced:** coupons.json has only one coupon that has expired. Added one more, used both. both apply which they shouldn't because they are expired.
 
 **Thinking Process:**
 > searched for coupon in pricing.js, found applyCoupon on line 82.
@@ -150,5 +150,41 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 
 **Checked:** Checked using both coupons (The old one and custom one too)
 
-**Time:** 10 min.
+**Time:** 10 min. *There is UTC timezone being used, there has to be some bug around this*
+----------------------------------------------------------------------------------------
+
+### CC-09: "The menu shows more dishes than it should"
+
+**Reproduced:** check if this was true by using inspect element, and yes there are many articles under menu-grid. There should have been only 6 at fresh reload but there are many.
+
+**Thinking Process:**
+> read dom.js in frontend
+> somethign to do with rendering
+
+**Cause:**
+
+**Fix:**
+
+**Checked:**
+
+**Time:**
+----------------------------------------------------------------------------------------
+
+### CC-10: "Sorting by price is backwards"
+
+**Reproduced:** reloaded the menu, changed filter to (low to high), menu displayed high to low and vice versa
+
+**Thinking Process:**
+> menu.js has an event listener for this. it changes filter property in state.
+> there is SORTER function in search,js at line 78. it has the value: price-asc and price-desc
+> swapped a and b because they do opp things.
+> saved and checked
+
+**Cause:** SORTER function in search.js at line 78 had mixed up calculations for sorting.
+
+**Fix:** swapped valued that swapped to make the math correct
+
+**Checked:** Reloaded and changed filter to low to high, it correctly shows low priced one first and same goes with high to low
+
+**Time:** ~15 min
 ----------------------------------------------------------------------------------------

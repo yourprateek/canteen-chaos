@@ -88,7 +88,7 @@ Reported by: canteen staff
 
 
 
-### CC-08: "An old coupon still works" 
+### CC-08: "An old coupon still works" *Done*
 
 > "FRESHERS24 was last year's offer and it expired ages ago. Someone used
 > it yesterday and got the discount?!!"
