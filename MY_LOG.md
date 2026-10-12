@@ -58,7 +58,7 @@ Hello Guys 🖐️
 **Checked:** The menu-cards are visible even at 160px width or below! *FIXED*
 
 **Time:** 10 - 15 min  
-*Found a bug at 481px width EXTRA? --> refer to CC-11E (just after all the mandatory bugs)*
+*Found a bug at 481px width EXTRA? --> refer to CC-11 (just after all the mandatory bugs)*
 ----------------------------------------------------------------------------------------
 
 ### CC-04: "The buttons don't work on my tablet"
@@ -80,16 +80,14 @@ Hello Guys 🖐️
 
 **Thinking Process:** something to do with 'sticky position'. sticky is applied to filter. Its parent has overflow-x. Found it.
 
-We want filters div to stick below the .slot-bar div. But that will make the filter tab take up half of the screen on smaller devices.
-
 **Cause:** Overflow property makes the sticky element stick to it not the page.
 
-**Fix:** Deleted the overflow property for it.
+**Fix:** (1) Deleted the overflow property for it. (2) added top:91.5px property for sticky;
 
-**Checked:** It does stick, but it sticks to the top. I dont think this is the actual fix, I'll ask a senior
-*PENDING*
+**Checked:** It does stick, but it sticks to the top. But that will make the filter tab take up half of the screen on smaller devices. *FIXED*
 
 **Time:** >1hr
+*This created a frontend design issue for smaller devices, thus it has to be fixed later --> refer CC14*
 ----------------------------------------------------------------------------------------
 
 ### CC-06: "I ordered more than they had"
@@ -158,17 +156,13 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 
 **Reproduced:** check if this was true by using inspect element, and yes there are many articles under menu-grid. There should have been only 6 at fresh reload but there are many.
 
-**Thinking Process:**
+**What I tried:**
 > read dom.js in frontend
 > somethign to do with rendering
 
-**Cause:**
+**Where I got to:**
 
-**Fix:**
-
-**Checked:**
-
-**Time:**
+**What I would try next:**
 ----------------------------------------------------------------------------------------
 
 ### CC-10: "Sorting by price is backwards"
@@ -188,12 +182,12 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 **Checked:** Reloaded and changed filter to low to high, it correctly shows low priced one first and same goes with high to low *FIXED*
 
 **Time:** ~15 min
-*The focus on the filter dropdown btn cut off below --> refer to C12E*
+*The focus on the filter dropdown btn cut off below --> refer to C12*
 ----------------------------------------------------------------------------------------
                                         EXTRAS
 ----------------------------------------------------------------------------------------
 
-### CC-11E: "from width: 480px to around 630px, the menu-grid is wider than the topbar"
+### CC-11: "from width: 480px to around 630px, the menu-grid is wider than the topbar"
 
 **Reproduced:** shifted to 500px width using inspect tool.
 
@@ -211,12 +205,31 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 **Time:** ~45 min
 ----------------------------------------------------------------------------------------
 
-### CC-12E: "Focus line of filter dropdown cuts of in larger screens"
+### CC-12: "Focus line of filter dropdown cuts of in larger screens"
 
 **Reproduced:** clicked the filter dropdown on regular laptop screen.
 
+**Cause:** There is no padding below it thus cuts the focus line.
+
+**Fix:** changed padding of .cat-tabs to padding: 0 16px 12px; (removed top padding) and added bottom padding to .filters-inner
+
+**Checked:** Checked on multiple width by clicking on it. *FIXED*
+
+**Time:** 10 min.
+----------------------------------------------------------------------------------------
+
+### C-13: "Veg and Non Veg button does not work properly"
+
+**Reproduced:** 
+> clicked on veg btn -> nothing happened
+> clicked on non veg -> changed to non veg only
+> clicked on veg multiple times -> nothing happened
+> refreshed
+> clicked on veg multiple times -> changed to veg only
+
 **Thinking Process:**
->there is no padding below it thus cuts the focus line.
+> Seems random
+> but this works perfectly when there are 3 columns
 
 **Cause:**
 
