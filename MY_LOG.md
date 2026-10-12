@@ -220,6 +220,8 @@ Hello Guys 🖐️
 
 ### C-13: "Veg and Non Veg button does not work properly"
 
+**Counter When:** When working on filter bar.
+
 **Reproduced:** 
 > clicked on veg btn -> nothing happened
 > clicked on non veg -> changed to non veg only
@@ -249,25 +251,14 @@ Hello Guys 🖐️
 
 **Cause:** Due to making this filter bar sticky, it takes half of the mobile screen height.
 
-**Fix:** Made an on/off switch for it.
+**Fix:** 
+> Made an on/off switch for it.
+*Note: When changing tabs, the filter-btn is still there.*
+> Changed the position of this filterBtn inside the view class from header
 
-**Checked:** Checked at all the vw. Only at 540px, the filter btn coincides with price slider.
-This can be eaily be changed by designer. *FIXED*
+**Checked:** 
+> Checked at all the vw. Only at 540px, the filter btn coincides with price slider.
+> This can be eaily be changed by designer. *FALSE-FIXED*
 
-**Time:** 30 min
-----------------------------------------------------------------------------------------
-
-### C-15: "The filter btn has the arrow-down btn outside (padding area)"
-
-**Reproduced:**
-
-**Thinking Process:**
-
-**Cause:**
-
-**Fix:**
-
-**Checked:**
-
-**Time:**
+**Time:** 30 min + 10 min
 ----------------------------------------------------------------------------------------

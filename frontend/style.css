@@ -168,7 +168,7 @@ h1, h2, h3 { margin: 0; }
 
 .filterBtn{
   position: absolute;
-  bottom: -96px;
+  top: 157px;
   right: 24px;
 
   display: flex;
@@ -179,7 +179,7 @@ h1, h2, h3 { margin: 0; }
 }
 
 .filterBtn:has(#filter-checkbox:not(:checked)){
-  bottom: -36px;
+  top: 96px;
 }
 
 #filter-checkbox{
@@ -196,7 +196,7 @@ h1, h2, h3 { margin: 0; }
   }
 }
 
-.site-header:has(#filter-checkbox:not(:checked)) ~ .view .filters {
+.filterBtn:has(#filter-checkbox:not(:checked)) ~ .filters {
   display: none;
 }
 
