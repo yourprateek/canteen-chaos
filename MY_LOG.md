@@ -87,7 +87,7 @@ Hello Guys 🖐️
 **Checked:** It does stick, but it sticks to the top. But that will make the filter tab take up half of the screen on smaller devices. *FIXED*
 
 **Time:** >1hr 
-*This created a frontend design issue for smaller devices, thus it has to be fixed later --> refer CC14* pending
+*This created a frontend design issue for smaller devices, thus it has to be fixed later --> refer CC14*
 ----------------------------------------------------------------------------------------
 
 ### CC-06: "I ordered more than they had"
@@ -147,22 +147,24 @@ Hello Guys 🖐️
 
 **Fix:** Added an if statement for it.
 
-**Checked:** Checked using both coupons (The old one and custom one too)
+**Checked:** Checked using both coupons (The old one and custom one too) *FIXED*
 
-**Time:** 10 min. *There is UTC timezone being used, there has to be some bug around this* pending
+**Time:** 10 min. 
+*There is UTC timezone being used, there has to be some bug around this --> refer CC-15*
 ----------------------------------------------------------------------------------------
 
-### CC-09: "The menu shows more dishes than it should"
+### CC-09: "The menu shows more dishes than it should"                      *Could Not Fix*
 
-**Reproduced:** check if this was true by using inspect element, and yes there are many articles under menu-grid. There should have been only 6 at fresh reload but there are many.
+**Reproduced:** check if this was true by using inspect element, and yes there are many articles under menu-grid. There should have been only 6(for <1000px vw) at fresh reload but there are many.
 
 **What I tried:**
 > read dom.js in frontend
 > somethign to do with rendering
+> went to menu.js
 
-**Where I got to:**
+**Where I got to:** Line 118, menu.js in frontend
 
-**What I would try next:** pending
+**What I would try next:** I have a feeling that this has to do with line 128 in menu.js but just can't figure it out.
 ----------------------------------------------------------------------------------------
 
 ### CC-10: "Sorting by price is backwards"
@@ -218,9 +220,9 @@ Hello Guys 🖐️
 **Time:** 10 min.
 ----------------------------------------------------------------------------------------
 
-### C-13: "Veg and Non Veg button does not work properly"
+### C-13: "Veg and Non Veg button does not work properly" *Could not Fix*
 
-**Counter When:** When working on filter bar.
+**Countered When:** When working on filter bar.
 
 **Reproduced:** 
 > clicked on veg btn -> nothing happened
@@ -229,18 +231,19 @@ Hello Guys 🖐️
 > refreshed
 > clicked on veg multiple times -> changed to veg only
 
-**Thinking Process:**
+**What I did:**
 > Seems random
 > but this works perfectly when there are 3 columns
 > maybe padding is the issue, clicking padding does nothing I think.
+> I went to menu.js line 340, it has the event-listener that detects click. It is okay
+> no overlay on the btns. I checked it using inspect tool.
+> This happens after width of about 996px .
 
-**Cause:**
+**Where I got:** This is definately not random, it happens after some screen width and the btn works if I click on center but does not work is click at some significant radius.
 
-**Fix:**
+**What I would do next:** No Idea man
 
-**Checked:**
-
-**Time:**
+**Time:** ~ 2hrs
 ----------------------------------------------------------------------------------------
 
 ### C-14: "On mobile devices, filter bar takes half of screen height"
@@ -254,11 +257,27 @@ Hello Guys 🖐️
 **Fix:** 
 > Made an on/off switch for it.
 *Note: When changing tabs, the filter-btn is still there.*
-> Changed the position of this filterBtn inside the view class from header
+> Changed the position of this filterBtn inside the view class from header and some styling too
 
 **Checked:** 
 > Checked at all the vw. Only at 540px, the filter btn coincides with price slider.
 > This can be eaily be changed by designer. *FALSE-FIXED*
+> Checked all the tabs. *FIXED*
 
 **Time:** 30 min + 10 min
 ----------------------------------------------------------------------------------------
+
+### CC-15: "TCoupon has expired about 5.5hrs ago and I can still use it"
+
+**Countered When:** I was fixing expiry time thing.
+
+**Reproduced:**
+Its 11:52PM right now in my laptop, I am using IST.
+The coupon expires at 7 PM
+But I can still use it
+
+**Where I got:** Because 7PM GMT = 12:30AM (next day)
+
+**What I would do next:** I would search how to detect timezone and use that to subtract/add from GMT to make it timezone accurate
+----------------------------------------------------------------------------------------
+
