@@ -86,8 +86,8 @@ Hello Guys 🖐️
 
 **Checked:** It does stick, but it sticks to the top. But that will make the filter tab take up half of the screen on smaller devices. *FIXED*
 
-**Time:** >1hr
-*This created a frontend design issue for smaller devices, thus it has to be fixed later --> refer CC14*
+**Time:** >1hr 
+*This created a frontend design issue for smaller devices, thus it has to be fixed later --> refer CC14* pending
 ----------------------------------------------------------------------------------------
 
 ### CC-06: "I ordered more than they had"
@@ -149,7 +149,7 @@ Hello Guys 🖐️
 
 **Checked:** Checked using both coupons (The old one and custom one too)
 
-**Time:** 10 min. *There is UTC timezone being used, there has to be some bug around this*
+**Time:** 10 min. *There is UTC timezone being used, there has to be some bug around this* pending
 ----------------------------------------------------------------------------------------
 
 ### CC-09: "The menu shows more dishes than it should"
@@ -162,7 +162,7 @@ Hello Guys 🖐️
 
 **Where I got to:**
 
-**What I would try next:**
+**What I would try next:** pending
 ----------------------------------------------------------------------------------------
 
 ### CC-10: "Sorting by price is backwards"
@@ -230,6 +230,38 @@ Hello Guys 🖐️
 **Thinking Process:**
 > Seems random
 > but this works perfectly when there are 3 columns
+> maybe padding is the issue, clicking padding does nothing I think.
+
+**Cause:**
+
+**Fix:**
+
+**Checked:**
+
+**Time:**
+----------------------------------------------------------------------------------------
+
+### C-14: "On mobile devices, filter bar takes half of screen height"
+
+**Reproduced:** went to max-width: 760px media query.
+
+**Thinking Process:** I could make this a dropdown menu, or simply add a filter checkbox that turns off/on the filter bar.
+
+**Cause:** Due to making this filter bar sticky, it takes half of the mobile screen height.
+
+**Fix:** Made an on/off switch for it.
+
+**Checked:** Checked at all the vw. Only at 540px, the filter btn coincides with price slider.
+This can be eaily be changed by designer. *FIXED*
+
+**Time:** 30 min
+----------------------------------------------------------------------------------------
+
+### C-15: "The filter btn has the arrow-down btn outside (padding area)"
+
+**Reproduced:**
+
+**Thinking Process:**
 
 **Cause:**
 
