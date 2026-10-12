@@ -175,7 +175,7 @@ h1, h2, h3 { margin: 0; }
   z-index: 40;
 }
 
-.filters-inner { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.filters-inner { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding-bottom: 12px;}
 
 .search, .select {
   padding: 9px 14px;
@@ -207,7 +207,7 @@ h1, h2, h3 { margin: 0; }
   display: flex;
   gap: 6px;
   overflow-x: auto;
-  padding: 12px 16px 12px;
+  padding: 0 16px 12px;
   scrollbar-width: thin;
   position: relative;
   background: var(--orange-soft);

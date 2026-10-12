@@ -188,9 +188,12 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 **Checked:** Reloaded and changed filter to low to high, it correctly shows low priced one first and same goes with high to low *FIXED*
 
 **Time:** ~15 min
+*The focus on the filter dropdown btn cut off below --> refer to C12E*
+----------------------------------------------------------------------------------------
+                                        EXTRAS
 ----------------------------------------------------------------------------------------
 
-### CC-11(Extra): "from width: 480px to around 630px, the menu-grid is wider than the topbar"
+### CC-11E: "from width: 480px to around 630px, the menu-grid is wider than the topbar"
 
 **Reproduced:** shifted to 500px width using inspect tool.
 
@@ -206,4 +209,20 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 **Checked:** Checked the layout of the grid menu properly in all width sizes. *FIXED*
 
 **Time:** ~45 min
+----------------------------------------------------------------------------------------
+
+### CC-12E: "Focus line of filter dropdown cuts of in larger screens"
+
+**Reproduced:** clicked the filter dropdown on regular laptop screen.
+
+**Thinking Process:**
+>there is no padding below it thus cuts the focus line.
+
+**Cause:**
+
+**Fix:**
+
+**Checked:**
+
+**Time:**
 ----------------------------------------------------------------------------------------
