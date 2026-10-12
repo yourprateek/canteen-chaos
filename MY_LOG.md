@@ -115,7 +115,28 @@ PENDING
 
 ### CC-07: "Cancelling makes it worse"
 
-**Reproduced:** 
+**Reproduced:** Ordered A dish and cancelled right away, the no. of dishes dropped and dropped again when cancelled but never came back in the counter tab. Ordered 2 dish, subtracted 4.
+
+**Thinking Process:**
+> went to cancel order btn in indec.html line 268.
+> went to staff.js line 104 searching staffRows. Then found cancelled dataset at 154.
+>  went to cancelOrder() in orders.js at line 208.
+> well, cancelling should be done in the backend,searched cancel in smoke.js, found smthng on line 298.
+> went to recommend.js, found smthng good in validation.js at line 118. releaseStock()
+> changed - to + to add the stock back.
+
+**Cause:** releaseStock() function subtracted the no. of dished ordered hence subtracting double of what ordered.
+
+**Fix:** Changed - (minus) in the function to + (plus) {- -> +}
+
+**Checked:** Checked multiple dishes in lunch time, each dish contains what it contained before the order placed after cancelling. FIXED
+
+**Time:** >1.5 hr
+----------------------------------------------------------------------------------------
+
+### CC-08: "An old coupon still works"
+
+**Reproduced:**
 
 **Thinking Process:**
 

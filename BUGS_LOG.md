@@ -78,7 +78,7 @@ Reported by: canteen staff
 
 
 
-### CC-07: "Cancelling makes it worse"
+### CC-07: "Cancelling makes it worse" *Done*
 
 > "A student cancelled an order and the number of plates we have left went
 > *down* again instead of coming back. Do that a few times and the system
@@ -88,7 +88,7 @@ Reported by: canteen staff
 
 
 
-### CC-08: "An old coupon still works"
+### CC-08: "An old coupon still works" 
 
 > "FRESHERS24 was last year's offer and it expired ages ago. Someone used
 > it yesterday and got the discount?!!"
