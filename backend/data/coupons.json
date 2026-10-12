@@ -78,5 +78,22 @@
     "expiresAt": "2024-09-30T23:59:59.000Z",
     "usesLeft": 10,
     "description": "Expired freshers offer"
+  },
+  {
+    "code": "CUSTOM35",
+    "type": "flat",
+    "value": 16,
+    "maxDiscount": 67,
+    "minOrder": 167,
+    "vegOnly": false,
+    "slots": [
+      "breakfast",
+      "lunch",
+      "evening",
+      "allday"
+    ],
+    "expiresAt": "2026-10-11T23:59:59.000Z",
+    "usesLeft": 100,
+    "description": "Expired Custom offer"
   }
 ]

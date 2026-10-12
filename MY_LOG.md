@@ -25,7 +25,7 @@ Hello Guys 🖐️
 
 **Fix:** Deleted the z-index line.
 
-**Checked:** The suggestions now appear above the bar. FIXED
+**Checked:** The suggestions now appear above the bar. *FIXED*
 
 **Time:** about 4-5 min.
 ----------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ Hello Guys 🖐️
 
 **Fic:** Deleted color attribute.
 
-**Checked:** Save & refreshed the css file and browser. FIXED
+**Checked:** Save & refreshed the css file and browser. *FIXED*
 
 **Time:** about 5-7 min.
 ----------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ Hello Guys 🖐️
 
 **Fix:** made width of menu-card 90% of the viewport width. Also made padding 5% of viewport width so that it stays at center.
 
-**Checked:** The menu-cards are visible even at 160px width or below! FIXED
+**Checked:** The menu-cards are visible even at 160px width or below! *FIXED*
 
 **Time:** 10 - 15 min  *Found a bug at 490px width EXTRA?*
 ----------------------------------------------------------------------------------------
@@ -68,7 +68,7 @@ Hello Guys 🖐️
 
 **Fix:** Deleted the media query responsible for this on line 1031 to 1046
 
-**Checked:** Button was already working lol, now user can interact with it directly. FIXED
+**Checked:** Button was already working lol, now user can interact with it directly. *FIXED*
 
 **Time:** 2 min
 ----------------------------------------------------------------------------------------
@@ -86,7 +86,7 @@ We want filters div to stick below the .slot-bar div. But that will make the fil
 **Fix:** Deleted the overflow property for it.
 
 **Checked:** It does stick, but it sticks to the top. I dont think this is the actual fix, I'll ask a senior
-PENDING
+*PENDING*
 
 **Time:** >1hr
 ----------------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ PENDING
 
 **Fix:** added that condition to setQty() in state.js at line 97 (integrated it with)
 
-**Checked:** checked on two items that had low badge acive. FIXED
+**Checked:** checked on two items that had low badge acive. *FIXED*
 
 **Time:** about ~4hr
 ----------------------------------------------------------------------------------------
@@ -129,22 +129,26 @@ PENDING
 
 **Fix:** Changed - (minus) in the function to + (plus) {- -> +}
 
-**Checked:** Checked multiple dishes in lunch time, each dish contains what it contained before the order placed after cancelling. FIXED
+**Checked:** Checked multiple dishes in lunch time, each dish contains what it contained before the order placed after cancelling. *FIXED*
 
 **Time:** >1.5 hr
 ----------------------------------------------------------------------------------------
 
 ### CC-08: "An old coupon still works"
 
-**Reproduced:**
+**Reproduced:** coupons.json has only one coupon that has expired. Added one more, used both. both apply.
 
 **Thinking Process:**
+> searched for coupon in pricing.js, found applyCoupon on line 82.
+> I think there is no if statement to validate expiry.
+> forgot how to compare two date objects, did a quick google search. used .getTime() to convert string/object to millisecond time and then compared them.
+> added and checked.
 
-**Cause:**
+**Cause:** There was no check for expiry in pricing.js
 
-**Fix:**
+**Fix:** Added an if statement for it.
 
-**Checked:**
+**Checked:** Checked using both coupons (The old one and custom one too)
 
-**Time:**
+**Time:** 10 min.
 ----------------------------------------------------------------------------------------

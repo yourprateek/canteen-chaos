@@ -91,6 +91,10 @@ function applyCoupon(code, lines, coupons, { slot = null, now = new Date() } = {
     return { valid: false, discount: 0, reason: 'This coupon is fully used' };
   }
 
+  const expiryDate = new Date(coupon.expiresAt);
+
+  if(expiryDate.getTime() <= now.getTime()) return { valid: false, discount: 0, reason: 'Coupon expired' };
+
   const subtotal = sumLines(lines);
   if (subtotal < coupon.minOrder) {
     return {
