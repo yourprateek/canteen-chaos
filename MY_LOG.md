@@ -267,7 +267,7 @@ Hello Guys 🖐️
 **Time:** 30 min + 10 min
 ----------------------------------------------------------------------------------------
 
-### CC-15: "TCoupon has expired about 5.5hrs ago and I can still use it"
+### CC-15: "Coupon (CUSTOM35) has expired about 5.5hrs ago and I can still use it"
 
 **Countered When:** I was fixing expiry time thing.
 
@@ -278,6 +278,22 @@ But I can still use it
 
 **Where I got:** Because 7PM GMT = 12:30AM (next day)
 
+wait.... no need to fix this, as the app only accepts order after 7AM and before 10PM. *FIXED*
+
 **What I would do next:** I would search how to detect timezone and use that to subtract/add from GMT to make it timezone accurate
 ----------------------------------------------------------------------------------------
 
+### CC-16: "'My orders' Tab is empty even after making an order" *Could Not Fix*
+
+**Countered When:** Checking for other bugs
+
+**Reproduced:** Open the counter afrer ordering or if you have ordered before, open it directly, it should be filled with previous order and current order but is not.
+
+**What I tried:**
+> searched orders.js, checkout.js, but did not find anything that I understand.
+> orders.json has list of all the orders
+
+**Where I got:** line 168 of orders.js has OrderCard just like MenuCard, load My Orders also is similar to loadMenu.
+
+**What I would do next:** Read the code using a free mind.
+----------------------------------------------------------------------------------------
