@@ -1,20 +1,6 @@
 # BY PRATEEK GUPTA | 01796402725 | CSE
 
 Hello Guys 🖐️
-
-*Template for me IGNORE*
-
-**Reproduced:**
-
-**Thinking Process:**
-
-**Cause:**
-
-**Fix:**
-
-**Checked:**
-
-**Time:**
 ----------------------------------------------------------------------------------------
 
 ### CC-01 : "The search suggestions are behind everything"
